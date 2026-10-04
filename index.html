@@ -956,7 +956,7 @@ function saveLink(id){
   const i = document.getElementById('inp-'+id);
   let u = i.value.trim();
   if(!u){showToast('⚠️ Link tidak boleh kosong.');return;}
-  if(!u.startsWith('http')){u='https://'+u;i.value=u;}
+  if(!u.startsWith('http')){u='https://'+u;i.value=u;} 
   const l=loadLinks(); l[id]=u; saveLinks(l);
   applyLink(id,u);
   document.getElementById('edit-'+id).classList.remove('open');
